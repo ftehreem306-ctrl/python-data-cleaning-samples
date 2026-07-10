@@ -1,0 +1,58 @@
+OrderID,CustomerName,City,OrderDate,Amount,Status,Email
+1000,Chris Doe,Phoenix,2025-04-08,372.19,Completed,chris.doe@email.com
+1001,John Smith,Houston,2025-10-17,287.2,Cancelled,john.smith@email.com
+1002,Fatima Brown,New York,2025-03-25,180.02,Cancelled,fatima.brown@email.com
+1003,David Doe,Karachi,2025-05-20,368.92,Cancelled,
+1004,Mike Wilson,Karachi,2025-04-19,37.22,Completed,mike.wilson@email.com
+1005,Omar Doe,Islamabad,2025-06-21,194.54,Completed,omar.doe@email.com
+1006,Ali Malik,Chicago,2025-07-15,494.92,Cancelled,ali.malik@email.com
+1007,Raj Smith,New York,2025-06-26,144.85,Cancelled,raj.smith@email.com
+1008,Lisa White,Islamabad,2025-05-05,134.61,Cancelled,lisa.white@email.com
+1009,David Jones,Chicago,2025-08-17,381.55,Completed,david.jones@email.com
+1010,David Garcia,Lahore,2025-08-20,,Completed,david.garcia@email.com
+1011,Ahmed Shah,Karachi,2025-04-05,91.71,Pending,ahmed.shah@email.com
+1012,Raj Khan,Los Angeles,2025-11-28,423.21,Cancelled,raj.khan@email.com
+1014,Sara Ali,Los Angeles,2025-03-12,410.77,Completed,sara.ali@email.com
+1015,Lisa Malik,New York,2025-10-28,482.72,Pending,lisa.malik@email.com
+1016,David Lee,Islamabad,2025-08-17,,Completed,david.lee@email.com
+1017,Sara Smith,New York,2025-02-08,431.92,Cancelled,sara.smith@email.com
+1018,Ali Nguyen,Los Angeles,2025-08-19,395.54,Completed,ali.nguyen@email.com
+1019,Emma White,New York,2025-11-22,44.4,Completed,emma.white@email.com
+1020,Sara Malik,Lahore,2025-06-05,136.16,Completed,
+1021,Chris Malik,Los Angeles,2025-04-25,212.11,Completed,chris.malik@email.com
+1022,John White,Islamabad,2025-10-07,90.08,Completed,
+1023,Emma Smith,Islamabad,2025-09-17,42.59,Completed,emma.smith@email.com
+1024,Chris Wilson,Los Angeles,2025-04-19,315.4,Completed,chris.wilson@email.com
+1025,Mike Ahmed,Karachi,2025-08-05,78.48,Completed,
+1027,Ali Patel,Phoenix,2025-11-20,338.91,Completed,ali.patel@email.com
+1028,Ali Brown,Los Angeles,2025-09-24,147.09,Pending,ali.brown@email.com
+1029,Omar Brown,Phoenix,2025-01-28,,Cancelled,omar.brown@email.com
+1030,Chris Brown,Islamabad,2025-12-18,287.04,Completed,chris.brown@email.com
+1031,Omar Jones,Chicago,2025-03-14,164.51,Completed,omar.jones@email.com
+1032,Sara Lee,Los Angeles,2025-12-09,487.31,Pending,sara.lee@email.com
+1033,Raj Shah,Lahore,2025-03-01,394.46,Pending,raj.shah@email.com
+1034,Raj Nguyen,New York,2025-08-28,111.79,Pending,raj.nguyen@email.com
+1035,Chris Ahmed,Phoenix,2025-02-28,185.31,Completed,chris.ahmed@email.com
+1036,John Doe,Phoenix,2025-10-06,33.55,Cancelled,john.doe@email.com
+1037,Ahmed Doe,Los Angeles,2025-05-07,358.76,Completed,ahmed.doe@email.com
+1038,Maria Nguyen,Karachi,2025-02-14,317.23,Pending,maria.nguyen@email.com
+1040,Mike White,New York,2025-05-10,223.5,Cancelled,mike.white@email.com
+1041,Chris Ahmed,Chicago,2025-02-22,264.99,Pending,chris.ahmed@email.com
+1042,Sara Shah,New York,2025-02-04,311.47,Pending,sara.shah@email.com
+1043,David Patel,Chicago,2025-12-21,447.94,Cancelled,david.patel@email.com
+1044,Raj Nguyen,New York,2025-04-18,236.38,Completed,raj.nguyen@email.com
+1045,Raj Ali,New York,2025-09-14,450.15,Pending,raj.ali@email.com
+1046,Omar Lee,New York,2025-11-16,148.18,Pending,omar.lee@email.com
+1047,Tina Malik,Chicago,2025-07-08,357.61,Completed,tina.malik@email.com
+1048,John Ahmed,Lahore,2025-10-25,430.52,Completed,john.ahmed@email.com
+1049,Mike Shah,Lahore,2025-12-18,251.79,Cancelled,mike.shah@email.com
+1050,Chris Shah,Chicago,2025-08-27,490.65,Completed,
+1051,David Khan,Chicago,2025-02-05,173.77,Cancelled,david.khan@email.com
+1053,Sara Ahmed,Los Angeles,2025-04-05,244.68,Cancelled,sara.ahmed@email.com
+1054,Raj Jones,Los Angeles,2025-12-24,392.23,Completed,raj.jones@email.com
+1055,Fatima Lee,Lahore,2025-12-13,51.86,Completed,fatima.lee@email.com
+1056,Mike Wilson,Los Angeles,2025-10-26,183.39,Completed,mike.wilson@email.com
+1057,John Wilson,Islamabad,2025-07-04,323.26,Cancelled,john.wilson@email.com
+1058,Ahmed Lee,New York,2025-08-25,226.25,Pending,ahmed.lee@email.com
+1059,Jane Brown,Houston,2025-08-25,178.15,Cancelled,jane.brown@email.com
+1099,Robert Taylor,,,,Unknown,robert@bademail

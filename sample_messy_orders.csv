@@ -1,0 +1,63 @@
+OrderID,CustomerName,City,OrderDate,Amount,Status,Email
+1000,  Chris Doe  ,phoenix,2025-04-08,372.19,completed,chris.doe@email.com
+1001,  John Smith  ,Houston,17/10/2025,287.2,cancelled,john.smith@email.com
+1002,Fatima Brown,New York,25-03-2025,180.02,Cancelled,fatima.brown@email.com
+1003,DAVID Doe,Karachi,20/05/2025,368.92,cancelled,
+1004,Mike WILSON,Karachi,19/04/2025,37.22,completed,mike.wilson@email.com
+1005,OMAR Doe,Islamabad,2025-06-21,194.54,completed,omar.doe@email.com
+1006,Ali Malik,CHICAGO,07-15-2025,494.92,Cancelled,ali.malik@email.com
+1007,raj Smith,New York,26-06-2025,144.85,Cancelled,raj.smith@email.com
+1008,lisa white,Islamabad,2025-05-05,134.61,cancelled,lisa.white@email.com
+1009,DAVID JONES,CHICAGO,17/08/2025,381.55,COMPLETED,david.jones@email.com
+1010,  DAVID Garcia  ,Lahore,08-20-2025,,completed,david.garcia@email.com
+1011,Ahmed Shah,Karachi,04-05-2025,$91.71,pending,ahmed.shah@email.com
+1012,raj Khan,los angeles,11-28-2025,423.21,Cancelled,raj.khan@email.com
+1012,Ahmed Shah,New York,20-06-2025,24.45,pending,ahmed.shah@email.com
+1014,Sara Ali,los angeles,03-12-2025,410.77,COMPLETED,sara.ali@email.com
+1015,lisa Malik,new york,28-10-2025,482.72,Pending,lisa.malik@email.com
+1016,DAVID lee,Islamabad,17/08/2025,,Completed ,david.lee@email.com
+1017,  Sara Smith  ,New York,08/02/2025,$431.92,CANCELLED,sara.smith@email.com
+1018,Ali Nguyen,Los Angeles,2025-08-19,395.54,completed,ali.nguyen@email.com
+1019,emma white,New York,22/11/2025,44.4,completed,emma.white@email.com
+1020,Sara Malik,Lahore,06-05-2025,136.16,Completed ,
+1021,Chris Malik,los angeles,2025-04-25,212.11,Completed,chris.malik@email.com
+1022,John white,Islamabad,10-07-2025,90.08,Completed ,
+1023,  emma Smith  ,Islamabad,2025-09-17,42.59,completed,emma.smith@email.com
+1024,Chris WILSON,los angeles,19/04/2025,315.4,Completed ,chris.wilson@email.com
+1025,Mike Ahmed,Karachi,08-05-2025,78.48,completed,
+1025,Fatima Garcia,los angeles,04-18-2025,,Pending,fatima.garcia@email.com
+1027,Ali patel,phoenix,20/11/2025,338.91,completed,ali.patel@email.com
+1028,  Ali Brown  ,los angeles,2025-09-24,147.09,Pending,ali.brown@email.com
+1029,OMAR Brown,phoenix,28/01/2025,,Cancelled,omar.brown@email.com
+1030,Chris Brown,Islamabad,18-12-2025,287.04,COMPLETED,chris.brown@email.com
+1031,OMAR JONES,CHICAGO,14/03/2025,164.51,Completed,omar.jones@email.com
+1032,Sara lee,los angeles,12-09-2025,487.31,Pending,sara.lee@email.com
+1033,raj Shah,Lahore,03-01-2025,394.46,Pending,raj.shah@email.com
+1034,  raj Nguyen  ,New York,2025-08-28,111.79,Pending,raj.nguyen@email.com
+1035,Chris Ahmed,phoenix,02-28-2025,185.31,Completed ,chris.ahmed@email.com
+1036,John Doe,phoenix,10-06-2025,33.55,Cancelled,john.doe@email.com
+1037,Ahmed Doe,Los Angeles,07/05/2025,$358.76,Completed ,ahmed.doe@email.com
+1038,Maria Nguyen,Karachi,02-14-2025,317.23,pending,maria.nguyen@email.com
+1038,Chris white,phoenix,2025-03-18,218.92,COMPLETED,chris.white@email.com
+1040,Mike white,New York,2025-05-10,223.5,CANCELLED,mike.white@email.com
+1041,Chris Ahmed,CHICAGO,02-22-2025,264.99,Pending,chris.ahmed@email.com
+1042,Sara Shah,New York,02-04-2025,311.47,Pending,sara.shah@email.com
+1043,DAVID patel,CHICAGO,21/12/2025,447.94,cancelled,david.patel@email.com
+1044,raj Nguyen,New York,18/04/2025,236.38,Completed ,raj.nguyen@email.com
+1045,raj Ali,new york,14-09-2025,450.15,pending,raj.ali@email.com
+1046,OMAR lee,new york,2025-11-16,$148.18,pending,omar.lee@email.com
+1047,  Tina Malik  ,CHICAGO,2025-07-08,$357.61,Completed ,tina.malik@email.com
+1048,John Ahmed,Lahore,25/10/2025,430.52,Completed,john.ahmed@email.com
+1049,Mike Shah,Lahore,2025-12-18,251.79,cancelled,mike.shah@email.com
+1050,Chris Shah,CHICAGO,2025-08-27,490.65,Completed,
+1051,DAVID Khan,CHICAGO,02-05-2025,173.77,cancelled,david.khan@email.com
+1051,OMAR white,los angeles,16/01/2025,499.96,Completed,omar.white@email.com
+1053,Sara Ahmed,Los Angeles,2025-04-05,244.68,CANCELLED,sara.ahmed@email.com
+1054,raj JONES,Los Angeles,24/12/2025,392.23,Completed,raj.jones@email.com
+1055,Fatima lee,Lahore,2025-12-13,51.86,completed,fatima.lee@email.com
+1056,Mike WILSON,los angeles,26/10/2025,183.39,Completed ,mike.wilson@email.com
+1057,John WILSON,Islamabad,07-04-2025,323.26,cancelled,john.wilson@email.com
+1058,Ahmed lee,new york,25-08-2025,226.25,Pending,ahmed.lee@email.com
+1059,Jane Brown,Houston,25-08-2025,178.15,CANCELLED,jane.brown@email.com
+,,,,,,
+1099,Robert Taylor,N/A,31/13/2025,NaN,unknown,robert@bademail
