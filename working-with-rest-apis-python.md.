@@ -1,0 +1,167 @@
+# Working With REST APIs in Python: A Practical Guide With `requests`
+
+Most of the data you'll ever want as a developer doesn't live in a file — it lives behind an API. Weather data, currency rates, GitHub repo stats, your own company's internal services: all of it typically comes back as JSON from a REST API. In this tutorial, you'll learn how to talk to one using Python's `requests` library, from a single GET request to handling errors like a production script instead of a toy script.
+
+By the end, you'll know how to:
+
+- Send GET and POST requests and read the JSON response
+- Pass query parameters and headers correctly
+- Handle errors and rate limits without your script silently failing
+- Structure repeated API calls so they're easy to maintain
+
+## Setting Up
+
+```bash
+pip install requests
+```
+
+For this tutorial, you'll use the [Open-Meteo API](https://open-meteo.com), a free weather API that doesn't require an API key — ideal for following along without any signup friction.
+
+## Step 1: Make Your First Request
+
+```python
+import requests
+
+url = "https://api.open-meteo.com/v1/forecast"
+params = {
+    "latitude": 33.6844,
+    "longitude": 73.0479,
+    "current_weather": True,
+}
+
+response = requests.get(url, params=params)
+data = response.json()
+
+print(data["current_weather"])
+```
+
+Two things are doing the real work here. `params` is a dictionary that `requests` automatically converts into a query string appended to the URL — you never have to hand-build `?latitude=33.68&longitude=73.04` yourself. And `.json()` parses the response body straight into a Python dictionary, so you can work with it like any other nested data structure.
+
+## Step 2: Check the Response Before You Trust It
+
+New API users often skip straight to `.json()` and get burned the first time a request fails. Always check the status first:
+
+```python
+response = requests.get(url, params=params)
+
+if response.status_code == 200:
+    data = response.json()
+    print(data["current_weather"])
+else:
+    print(f"Request failed with status {response.status_code}: {response.text}")
+```
+
+Even better, use `raise_for_status()`, which raises an exception automatically for any 4xx or 5xx response instead of letting you silently work with bad or missing data:
+
+```python
+try:
+    response = requests.get(url, params=params)
+    response.raise_for_status()
+    data = response.json()
+except requests.exceptions.HTTPError as err:
+    print(f"HTTP error occurred: {err}")
+except requests.exceptions.ConnectionError:
+    print("Couldn't reach the server — check your network connection.")
+```
+
+This distinction matters more than it looks. A script that assumes every request succeeds will eventually crash confusingly, three functions away from where the actual problem happened. A script that checks the response fails loudly and clearly, right where the problem is.
+
+## Step 3: Sending Data With POST
+
+GET requests fetch data; POST requests usually send it. Here's the shape of a typical POST request, using a test API that echoes back whatever you send it:
+
+```python
+url = "https://httpbin.org/post"
+payload = {"name": "Tehreem", "role": "tutorial writer"}
+
+response = requests.post(url, json=payload)
+print(response.json()["json"])
+```
+
+Notice `json=payload` instead of `data=payload`. Using `json=` does two things automatically: it serializes your dictionary to a JSON string, and it sets the `Content-Type: application/json` header for you. Using `data=` instead sends form-encoded data, which is a different format that many JSON APIs will reject outright — a mismatch that produces a confusing 400 error with no obvious cause unless you know to check the header.
+
+## Step 4: Adding Headers and Authentication
+
+Most real-world APIs require an API key, usually passed as a header:
+
+```python
+headers = {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Accept": "application/json",
+}
+
+response = requests.get(url, headers=headers)
+```
+
+Never hardcode a real key directly in your script. Store it in an environment variable instead, and read it at runtime:
+
+```python
+import os
+
+api_key = os.environ.get("MY_API_KEY")
+headers = {"Authorization": f"Bearer {api_key}"}
+```
+
+This one habit is the difference between a script you can safely commit to GitHub and one that leaks a credential the moment you push.
+
+## Step 5: Handling Rate Limits
+
+Many APIs will return a `429 Too Many Requests` status if you call them too quickly. A simple retry-with-backoff pattern handles this gracefully:
+
+```python
+import time
+
+def fetch_with_retry(url, params=None, max_retries=3):
+    for attempt in range(max_retries):
+        response = requests.get(url, params=params)
+
+        if response.status_code == 429:
+            wait = 2 ** attempt  # 1s, 2s, 4s...
+            print(f"Rate limited. Waiting {wait}s before retrying...")
+            time.sleep(wait)
+            continue
+
+        response.raise_for_status()
+        return response.json()
+
+    raise RuntimeError("Max retries exceeded")
+```
+
+This is called exponential backoff: each retry waits longer than the last, giving the server room to recover instead of hammering it with the same request over and over.
+
+## Putting It Together
+
+A small, well-structured API client for repeated calls might look like this:
+
+```python
+import os
+import requests
+
+class WeatherClient:
+    BASE_URL = "https://api.open-meteo.com/v1/forecast"
+
+    def get_current_weather(self, latitude, longitude):
+        params = {
+            "latitude": latitude,
+            "longitude": longitude,
+            "current_weather": True,
+        }
+        response = requests.get(self.BASE_URL, params=params)
+        response.raise_for_status()
+        return response.json()["current_weather"]
+
+client = WeatherClient()
+print(client.get_current_weather(33.6844, 73.0479))
+```
+
+Wrapping the API in a small class keeps the URL, error handling, and request logic in one place, so the rest of your code just calls `client.get_current_weather(...)` without needing to know anything about JSON or status codes.
+
+## Where to Go From Here
+
+You now have the core pattern behind almost any API integration: build the request, check the response, handle failure explicitly. From here, you could:
+
+- Use `httpx` instead of `requests` if you need asynchronous requests
+- Add response caching so repeated calls for the same data don't hit the API unnecessarily
+- Wrap `fetch_with_retry` around your client methods for production-grade resilience
+
+The specific endpoints will change from project to project. This pattern — request, verify, handle failure, retry when needed — doesn't.
